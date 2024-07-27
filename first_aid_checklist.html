@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>First Aid Box Checklist</title>
+	<link rel="stylesheet" href="style.css">
+	<style type="text/css">
+        input[type="date"] {
+            width: 100%;
+            box-sizing: border-box !important;
+            border: none !important;
+            padding: 8px !important;
+            text-align: center !important;
+        }
+        
+	</style>
+</head>
+<body>
+	<div class = "ad_logo">
+		<img src="file:///Users/apple/Desktop/medical_project/medical_project.png" alt="Company Logo">
+	</div>
+    <div class="header-container">
+        <div class="header-text">
+            <h1>Monthly First Aid Box Contents Checklist</h1>
+            <p>* Please check that all packaging is intact to ensure that contents are sterile and contents are in date. Also, make sure the box is in good condition and is clearly identifiable. Please note products marked with an <strong>*</strong> are to be used by staff with advanced first aid training.</p>
+        </div>
+    </div>
+
+    <form>
+        <table id="checklist-table">
+            <thead>
+                <tr>
+                    <th>ITEM</th>
+                    <th>QTY</th>
+                    <th>JAN</th>
+                    <th>FEB</th>
+                    <th>MAR</th>
+                    <th>APR</th>
+                    <th>MAY</th>
+                    <th>JUN</th>
+                    <th>JUL</th>
+                    <th>AUG</th>
+                    <th>SEP</th>
+                    <th>OCT</th>
+                    <th>NOV</th>
+                    <th>DEC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+
+        <p><strong>All first aid containers must be identified by a white cross on a green background.</strong></p>
+
+        <div class="submit-section">
+            <label for="staff-name"><strong>Staff Name:</strong></label>
+            <input type="text" id="staff-name" name="staff-name" required>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <div id="confirmationMessage">
+        First aid record saved successfully. Thank you for providing excellent support in my daily activities, making life worth living, and helping to create a better world.
+    </div>
+    <script defer src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Record Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <img id="company-logo" class="company-logo" src="file:///Users/apple/Desktop/medical_project/medical_project.png" alt="Company Logo">
+    </div>
+    <div class="header-container">
+        <img id="profile-pic" src="/static/assets/images/profil.png" alt="Profile Picture">
+        <div class="header-text">
+            <h1>MY MEDICATION RECORD SHEET</h1>
+            <p><strong>UPDATED ON:</strong> 21.07.2024</p>
+            <p><strong>UPDATED BY:</strong> Internal Audit</p>
+        </div>
+    </div>
+
+    <h2>Service User’s Details</h2>
+    <form id="medication-form" action="save_medication.php" method="post" onsubmit="handleSubmit(event)">
+        <table>
+            <tr>
+                <th>Service User’s name</th>
+                <th>D.O.B</th>
+                <th>Age</th>
+                <th>G.P.</th>
+                <th>Drug Allergy</th>
+            </tr>
+            <tr>
+                <td>
+                    <select id="service-user-name" name="service-user-name" onchange="fillDetailsMedication()" required>
+                        <option value="">Select User</option>
+                        <option value="MR. Perry Harry">MR. Perry Harry</option>
+                        <option value="MS. Jane Doe">MS. Jane Doe</option>
+                        <option value="MR. John Smith">MR. John Smith</option>
+                    </select>
+                </td>
+                <td><input type="date" id="dob" name="dob" required></td>
+                <td><input type="number" id="age" name="age" min="0" required></td>
+                <td><input type="text" id="gp" name="gp" required></td>
+                <td><input type="text" id="drug-allergy" name="drug-allergy" required></td>
+            </tr>
+        </table>
+
+        <h2 class="section-title">Medication Details</h2>
+        <table id="medication-table">
+            <tr>
+                <th>Block letters</th>
+                <th>Date Commenced</th>
+                <th>Drug Name</th>
+                <th>Dosage</th>
+                <th>Route of Administration</th>
+                <th>8am</th>
+                <th>12pm</th>
+                <th>4pm</th>
+                <th>8pm</th>
+            </tr>
+        </table>
+
+        <p><strong>* Letters highlighted in green denote a medication normally in a blister-pack. Always check</strong></p>
+        <p><strong>* Letters highlighted in red denote prn medication</strong></p>
+        <p><strong>* Letters highlighted in blue denote an inhaler device</strong></p>
+
+        <div class="submit-section">
+            <label for="staff-name"><strong>Staff Name:</strong></label>
+            <input type="text" id="staff-name" name="staff-name" required>
+            <label for="date"><strong>Date:</strong></label>
+            <input type="date" id="date" name="date" required>
+            <input type="submit" value="Submit">
+        </div>
+
+        <div id="confirmationMessage">
+            Medication record saved successfully. Thank you for providing excellent support in my daily activities, making life worth living, and helping to create a better world.
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

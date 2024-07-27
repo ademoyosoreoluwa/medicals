@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service User Management File</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <img id="company-logo" class="company-logo" src="file:///Users/apple/Desktop/Triangle_Project/triangle-logo.png" alt="Company Logo">
+    </div>
+    <div class="header-container">
+        <img id="profile-pic" src="file:///Users/apple/Desktop/Triangle_Project/Male-1.png" alt="Profile Picture">
+        <div class="header-text">
+            <h1>SERVICE USER MANAGEMENT FILES</h1>
+            <p><strong>UPDATED ON:</strong> 21.07.2024</p>
+            <p><strong>UPDATED BY:</strong> Internal Audit</p>
+        </div>
+        <div>
+        </div>
+
+    </div>
+
+    <div class="tabs">
+        <div class="tab active" onclick="openTab(event, 'perry')">MR. Perry Harry</div>
+        <div class="tab" onclick="openTab(event, 'jane')">MS. Jane Doe</div>
+        <div class="tab" onclick="openTab(event, 'john')">MR. John Smith</div>
+    </div>
+
+    <div id="anil-tab" class="tab-content active">
+        <h2>Service User’s Details</h2>
+        <table class="details-table">
+            <tr>
+                <th>Service User’s name</th>
+                <th>D.O.B</th>
+                <th>Age</th>
+                <th>G.P.</th>
+                <th>Drug Allergy</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="perry-name" readonly></td>
+                <td><input type="date" id="perry-dob" readonly></td>
+                <td><input type="number" id="perry-age" min="0" readonly></td>
+                <td><input type="text" id="perry-gp" readonly></td>
+                <td><input type="text" id="perry-drug-allergy" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <label for="perry-documentation"><strong>Documentation File:</strong></label>
+                    <select id="perry-documentation">
+                        <option value="">Select File</option>
+                        <option value="Activities Accounting Sheet">Activities Accounting Sheet</option>
+                        <option value="Communication and Delegation Sheet">Communication and Delegation Sheet</option>
+                        <option value="First Aid Box Checklist">First Aid Box Checklist</option>
+                        <option value="Grocery Accounting Sheet">Grocery Accounting Sheet</option>
+                        <option value="Medication Record Sheet">Medication Record Sheet</option>
+                        <option value="Night Duty Task Sheet">Night Duty Task Sheet</option>
+                        <option value="Night Duty Health and Safety Checks">Night Duty Health and Safety Checks</option>
+                        <option value="Participation Record">Participation Record</option>
+                        <option value="Personal Accounting Sheet">Personal Accounting Sheet</option>
+                        <option value="Petty Cash Accounting Sheet">Petty Cash Accounting Sheet</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="jane-tab" class="tab-content">
+        <h2>Service User’s Details</h2>
+        <table class="details-table">
+            <tr>
+                <th>Service User’s name</th>
+                <th>D.O.B</th>
+                <th>Age</th>
+                <th>G.P.</th>
+                <th>Drug Allergy</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="jane-name" readonly></td>
+                <td><input type="date" id="jane-dob" readonly></td>
+                <td><input type="number" id="jane-age" min="0" readonly></td>
+                <td><input type="text" id="jane-gp" readonly></td>
+                <td><input type="text" id="jane-drug-allergy" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <label for="jane-documentation"><strong>Documentation File:</strong></label>
+                    <select id="jane-documentation">
+                        <option value="">Select File</option>
+                        <option value="Activities Accounting Sheet">Activities Accounting Sheet</option>
+                        <option value="Communication and Delegation Sheet">Communication and Delegation Sheet</option>
+                        <option value="First Aid Box Checklist">First Aid Box Checklist</option>
+                        <option value="Grocery Accounting Sheet">Grocery Accounting Sheet</option>
+                        <option value="Medication Record Sheet">Medication Record Sheet</option>
+                        <option value="Night Duty Task Sheet">Night Duty Task Sheet</option>
+                        <option value="Night Duty Health and Safety Checks">Night Duty Health and Safety Checks</option>
+                        <option value="Participation Record">Participation Record</option>
+                        <option value="Personal Accounting Sheet">Personal Accounting Sheet</option>
+                        <option value="Petty Cash Accounting Sheet">Petty Cash Accounting Sheet</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="john-tab" class="tab-content">
+        <h2>Service User’s Details</h2>
+        <table class="details-table">
+            <tr>
+                <th>Service User’s name</th>
+                <th>D.O.B</th>
+                <th>Age</th>
+                <th>G.P.</th>
+                <th>Drug Allergy</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="john-name" readonly></td>
+                <td><input type="date" id="john-dob" readonly></td>
+                <td><input type="number" id="john-age" min="0" readonly></td>
+                <td><input type="text" id="john-gp" readonly></td>
+                <td><input type="text" id="john-drug-allergy" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <label for="john-documentation"><strong>Documentation File:</strong></label>
+                    <select id="john-documentation">
+                        <option value="">Select File</option>
+                        <option value="Activities Accounting Sheet">Activities Accounting Sheet</option>
+                        <option value="Communication and Delegation Sheet">Communication and Delegation Sheet</option>
+                        <option value="First Aid Box Checklist">First Aid Box Checklist</option>
+                        <option value="Grocery Accounting Sheet">Grocery Accounting Sheet</option>
+                        <option value="Medication Record Sheet">Medication Record Sheet</option>
+                        <option value="Night Duty Task Sheet">Night Duty Task Sheet</option>
+                        <option value="Night Duty Health and Safety Checks">Night Duty Health and Safety Checks</option>
+                        <option value="Participation Record">Participation Record</option>
+                        <option value="Personal Accounting Sheet">Personal Accounting Sheet</option>
+                        <option value="Petty Cash Accounting Sheet">Petty Cash Accounting Sheet</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

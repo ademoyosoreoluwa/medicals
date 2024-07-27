@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication and Delegation Sheet</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div>
+        <img id="company-logo" class="company-logo" src="file:///Users/apple/Desktop/medical_project/medical_project.png" alt="Company Logo">
+    </div>
+    <h1>Communication and Delegation Sheet</h1>
+
+    <form>
+        <table>
+            <tr>
+                <td><strong>Date:</strong></td>
+                <td><input type="date" name="date" onchange="fillDay()"></td>
+                <td><strong>Day:</strong></td>
+                <td><input type="text" name="day" readonly></td>
+            </tr>
+            <tr>
+                <td><strong>Handover from ND</strong></td>
+                <td class="checkbox"><input type="checkbox" name="handover-nd"></td>
+            </tr>
+            <tr>
+                <td><strong>Medication Checks given by ND</strong></td>
+                <td class="checkbox"><input type="checkbox" name="medication-checks"></td>
+            </tr>
+            <tr>
+                <td><strong>Money Checks</strong></td>
+                <td class="checkbox"><input type="checkbox" name="money-checks"></td>
+            </tr>
+        </table>
+
+        <h2>Daily Activity</h2>
+        <div class="section-title">Perry</div>
+        <textarea name="anil-activities"></textarea>
+        <div class="section-title">Appointments</div>
+        <textarea name="anil-appointments"></textarea>
+
+        <div class="section-title">Jane</div>
+        <textarea name="gerald-activities"></textarea>
+        <div class="section-title">Appointments</div>
+        <textarea name="gerald-appointments"></textarea>
+
+        <h2>Medication Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Medication</th>
+                    <th>8am</th>
+                    <th>12pm</th>
+                    <th>4pm</th>
+                    <th>8pm</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Perry</strong></td>
+                    <td class="radio"><input type="radio" name="medication-anil-time" value="8am"></td>
+                    <td class="radio"><input type="radio" name="medication-anil-time" value="12pm"></td>
+                    <td class="radio"><input type="radio" name="medication-anil-time" value="4pm"></td>
+                    <td class="radio"><input type="radio" name="medication-anil-time" value="8pm"></td>
+                </tr>
+                <tr>
+                    <td><strong>Jane</strong></td>
+                    <td class="radio"><input type="radio" name="medication-gerald-time" value="8am"></td>
+                    <td class="radio"><input type="radio" name="medication-gerald-time" value="12pm"></td>
+                    <td class="radio"><input type="radio" name="medication-gerald-time" value="4pm"></td>
+                    <td class="radio"><input type="radio" name="medication-gerald-time" value="8pm"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Staff Duties</h2>
+        <textarea name="staff-duties"></textarea>
+        <table>
+            <tr>
+                <td>Check Daily Notes/Participation Sheets are completed for each tenant</td>
+                <td class="checkbox"><input type="checkbox" name="check-notes"></td>
+            </tr>
+            <tr>
+                <td>Today’s fire warden is:</td>
+                <td><input type="text" name="fire-warden"></td>
+            </tr>
+            <tr>
+                <td>Cleaning of touch points in the house (light switches, handles, toilet facilities & TV remotes)</td>
+            </tr>
+            <tr>
+                <td>10am</td>
+                <td class="checkbox"><input type="checkbox" name="cleaning-10am"></td>
+            </tr>
+            <tr>
+                <td>1pm</td>
+                <td class="checkbox"><input type="checkbox" name="cleaning-1pm"></td>
+            </tr>
+            <tr>
+                <td>3pm</td>
+                <td class="checkbox"><input type="checkbox" name="cleaning-3pm"></td>
+            </tr>
+            <tr>
+                <td>6pm</td>
+                <td class="checkbox"><input type="checkbox" name="cleaning-6pm"></td>
+            </tr>
+        </table>
+        <p></p>
+
+        <div class="submit-section">
+            <label for="staff-name"><strong>Staff Name:</strong></label>
+            <input type="text" id="staff-name" name="staff-name" required>
+            <input type="submit" value="Submit">
+        </div>
+
+        <div id="confirmationMessage">
+            Today delegation and communication record saved successfully. Thank you for providing excellent support in my daily activities, making life worth living, and helping to create a better world.
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
