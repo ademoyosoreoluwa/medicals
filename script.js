@@ -4,28 +4,28 @@ const userDetails = {
             dob: "1900-11-01",
             gp: "Belfast City Hospital",
             drugAllergy: "None known",
-            profilePic: "file:///Users/apple/Desktop/medical_project/Male-1.png"
+            profilePic: "https://ademoyosoreoluwa.github.io/medicals/Male-1.png"
     },
     "jane": {
         name: "MS. Jane Doe",
         dob: "1975-05-14",
         gp: "City Health Clinic",
         drugAllergy: "Penicillin",
-        profilePic: "file:///Users/apple/Desktop/medical_project/Male-2.png"
+        profilePic: "https://ademoyosoreoluwa.github.io/medicals/Male-2.png"
     },
     "john": {
         name: "MR. John Smith",
         dob: "1980-02-20",
         gp: "Town Health Center",
         drugAllergy: "None known",
-        profilePic: "file:///Users/apple/Desktop/medical_project/Male-3.png"
+        profilePic: "https://ademoyosoreoluwa.github.io/medicals/Male-3.png"
     },
 
     "MR. Perry Harry": {
         dob: "1900-11-01",
         gp: "Belfast City Hospital",
         drugAllergy: "None known",
-        profilePic: "file:///Users/apple/Desktop/medical_project/Male-1.png",
+        profilePic: "https://ademoyosoreoluwa.github.io/medicals/Male-1.png",
         medications: [
             { block: 'A', date: '09-05-14', name: 'Levothyroxine 50MCG', dosage: '1', route: 'Oral' },
             { block: 'B', date: '09-05-14', name: 'Carbamazepine / Tegretol 200MG', dosage: '2.5/3', route: 'Oral' },
@@ -59,7 +59,7 @@ const userDetails = {
         dob: "1975-05-14",
         gp: "City Health Clinic",
         drugAllergy: "Penicillin",
-        profilePic: "file:///Users/apple/Desktop/medical_project/Male-2.png",
+        profilePic: "https://ademoyosoreoluwa.github.io/medicals/Male-2.png",
         medications: [
             { block: 'A', date: '10-10-20', name: 'Metformin 500MG', dosage: '1', route: 'Oral' },
             { block: 'B', date: '12-11-20', name: 'Aspirin 75MG', dosage: '1', route: 'Oral' },
@@ -93,7 +93,7 @@ const userDetails = {
         dob: "1980-02-20",
         gp: "Town Health Center",
         drugAllergy: "None known",
-        profilePic: "file:///Users/apple/Desktop/medical_project/Male-3.png",
+        profilePic: "https://ademoyosoreoluwa.github.io/medicals/Male-3.png",
         medications: [
             { block: 'A', date: '05-03-19', name: 'Lisinopril 10MG', dosage: '1', route: 'Oral' },
             { block: 'B', date: '07-04-19', name: 'Metoprolol 50MG', dosage: '1', route: 'Oral' },
