@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Duty Task Sheet</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <style type="text/css">
+        th, td {
+            text-align: left !important;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img id="company-logo" class="company-logo" src="file:///Users/apple/Desktop/medical_project/medical_project.png" alt="Company Logo">
+    </div>
+
+    <h1>Night Duty Task Sheet</h1>
+    <h2>Tasks</h2>
+    <form>
+        <table>
+            <tr>
+                <th>Task</th>
+                <th>Completed</th>
+            </tr>
+            <tr>
+                <td>Receive Handover</td>
+                <td class="checkbox"><input type="checkbox" name="receive-handover"></td>
+            </tr>
+            <tr>
+                <td>Check Communication file</td>
+                <td class="checkbox"><input type="checkbox" name="check-communication-file"></td>
+            </tr>
+            <tr>
+                <td>Check work Emails</td>
+                <td class="checkbox"><input type="checkbox" name="check-work-emails"></td>
+            </tr>
+            <tr>
+                <td>Handover Medication/Money keys</td>
+                <td class="checkbox"><input type="checkbox" name="handover-keys"></td>
+            </tr>
+            <tr>
+                <td>Complete Service User Notes</td>
+                <td class="checkbox"><input type="checkbox" name="complete-notes"></td>
+            </tr>
+            <tr>
+                <td>Money Balance Checks</td>
+                <td class="checkbox"><input type="checkbox" name="money-balance-checks"></td>
+            </tr>
+            <tr>
+                <td>Enhanced Cleaning Check List</td>
+                <td class="checkbox"><input type="checkbox" name="enhanced-cleaning-checklist"></td>
+            </tr>
+            <tr>
+                <td>Disinfect Door/cupboard Handles</td>
+                <td class="checkbox"><input type="checkbox" name="disinfect-handles"></td>
+            </tr>
+            <tr>
+                <td>Disinfect light switches</td>
+                <td class="checkbox"><input type="checkbox" name="disinfect-switches"></td>
+            </tr>
+            <tr>
+                <td>Disinfect work surfaces & tables</td>
+                <td class="checkbox"><input type="checkbox" name="disinfect-surfaces"></td>
+            </tr>
+            <tr>
+                <td>Empty PPE Bin</td>
+                <td class="checkbox"><input type="checkbox" name="empty-ppe-bin"></td>
+            </tr>
+            <tr>
+                <td>Disinfect hand rails</td>
+                <td class="checkbox"><input type="checkbox" name="disinfect-handrails"></td>
+            </tr>
+            <tr>
+                <td>Disinfect Fridge/freezer handles</td>
+                <td class="checkbox"><input type="checkbox" name="disinfect-fridge-handles"></td>
+            </tr>
+            <tr>
+                <td>Disinfect washing machine</td>
+                <td class="checkbox"><input type="checkbox" name="disinfect-washing-machine"></td>
+            </tr>
+            <tr>
+                <td>Disinfect tumble dryer handles</td>
+                <td class="checkbox"><input type="checkbox" name="disinfect-dryer-handles"></td>
+            </tr>
+            <tr>
+                <td>Hoover/Brush floors and Mop Floors in:</td>
+                <td class="checkbox"><input type="checkbox" name="clean-floors"></td>
+            </tr>
+            <tr>
+                <td>Livingroom/Dining room</td>
+                <td class="checkbox"><input type="checkbox" name="clean-living-dining-room"></td>
+            </tr>
+            <tr>
+                <td>Kitchen</td>
+                <td class="checkbox"><input type="checkbox" name="clean-kitchen"></td>
+            </tr>
+            <tr>
+                <td>Utility room</td>
+                <td class="checkbox"><input type="checkbox" name="clean-utility-room"></td>
+            </tr>
+            <tr>
+                <td>JS Livingroom</td>
+                <td class="checkbox"><input type="checkbox" name="clean-gm-livingroom"></td>
+            </tr>
+            <tr>
+                <td>Landing/downstairs front hallway</td>
+                <td class="checkbox"><input type="checkbox" name="clean-landing-hallway"></td>
+            </tr>
+            <tr>
+                <td>Staff Bathroom</td>
+                <td class="checkbox"><input type="checkbox" name="clean-staff-bathroom"></td>
+            </tr>
+            <tr>
+                <td>Stair’s carpet</td>
+                <td class="checkbox"><input type="checkbox" name="clean-stairs-carpet"></td>
+            </tr>
+            <tr>
+                <td>Other Checks</td>
+                <td class="checkbox"><input type="checkbox" name="other-checks"></td>
+            </tr>
+            <tr>
+                <td>Diary checked and added to planner</td>
+                <td class="checkbox"><input type="checkbox" name="check-diary"></td>
+            </tr>
+            <tr>
+                <td>Complete Health and safety checklist</td>
+                <td class="checkbox"><input type="checkbox" name="complete-hs-checklist"></td>
+            </tr>
+            <tr>
+                <td>Salt driveway/smoking area as required</td>
+                <td class="checkbox"><input type="checkbox" name="salt-driveway"></td>
+            </tr>
+            <tr>
+                <td>Check money/meds cupboard locked</td>
+                <td class="checkbox"><input type="checkbox" name="check-cupboard"></td>
+            </tr>
+            <tr>
+                <td>Ensure all windows & doors locked</td>
+                <td class="checkbox"><input type="checkbox" name="lock-windows-doors"></td>
+            </tr>
+            <tr>
+                <td>Ensure all electrical items off & unplugged</td>
+                <td class="checkbox"><input type="checkbox" name="unplug-electrical-items"></td>
+            </tr>
+            <tr>
+                <td>Check training on Triangle site (weekly)</td>
+                <td class="checkbox"><input type="checkbox" name="check-training"></td>
+            </tr>
+        </table>
+
+        <div class="section-title">Daily cleaning tasks by Area</div>
+
+        <h3>KITCHEN INC UTILITY AREA</h3>
+        <table>
+            <tr>
+                <td>Wipe down work tops</td>
+                <td class="checkbox"><input type="checkbox" name="wipe-work-tops"></td>
+            </tr>
+            <tr>
+                <td>Date Check Food in all Fridges List & dispose of out-of-date food</td>
+                <td class="checkbox"><input type="checkbox" name="check-food"></td>
+            </tr>
+            <tr>
+                <td>Wipe down fridge</td>
+                <td class="checkbox"><input type="checkbox" name="wipe-fridge"></td>
+            </tr>
+            <tr>
+                <td>Clean Microwave</td>
+                <td class="checkbox"><input type="checkbox" name="clean-microwave"></td>
+            </tr>
+            <tr>
+                <td>Check Tumble Dryer Filters</td>
+                <td class="checkbox"><input type="checkbox" name="check-dryer-filters"></td>
+            </tr>
+            <tr>
+                <td>Wipe Down Oven (DEEP CLEAN MONTHLY)</td>
+                <td class="checkbox"><input type="checkbox" name="wipe-oven"></td>
+            </tr>
+            <tr>
+                <td>Bin emptied inc food bin</td>
+                <td class="checkbox"><input type="checkbox" name="empty-bin"></td>
+            </tr>
+            <tr>
+                <td>Window ledge/blind</td>
+                <td class="checkbox"><input type="checkbox" name="clean-window-ledge"></td>
+            </tr>
+            <tr>
+                <td>Clean down toaster, kettle & condiment holders</td>
+                <td class="checkbox"><input type="checkbox" name="clean-toaster-kettle"></td>
+            </tr>
+            <tr>
+                <td>Check washing machine & dryer are empty</td>
+                <td class="checkbox"><input type="checkbox" name="check-washer-dryer"></td>
+            </tr>
+        </table>
+
+        <h3>LIVING ROOM/DINING ROOM</h3>
+        <table>
+            <tr>
+                <td>Wipe down Leather furniture</td>
+                <td class="checkbox"><input type="checkbox" name="wipe-leather-furniture"></td>
+            </tr>
+            <tr>
+                <td>Tidy Cushions</td>
+                <td class="checkbox"><input type="checkbox" name="tidy-cushions"></td>
+            </tr>
+            <tr>
+                <td>Window ledges cleaned</td>
+                <td class="checkbox"><input type="checkbox" name="clean-window-ledges"></td>
+            </tr>
+            <tr>
+                <td>Table and chairs wipe down</td>
+                <td class="checkbox"><input type="checkbox" name="wipe-table-chairs"></td>
+            </tr>
+            <tr>
+                <td>Clean top of other surfaces e.g. fireplace, sideboard etc</td>
+                <td class="checkbox"><input type="checkbox" name="clean-other-surfaces"></td>
+            </tr>
+            <tr>
+                <td>Clean skirting boards</td>
+                <td class="checkbox"><input type="checkbox" name="clean-skirting-boards"></td>
+            </tr>
+            <tr>
+                <td>Clean Tv stand and tv with glass cleaner</td>
+                <td class="checkbox"><input type="checkbox" name="clean-tv-stand"></td>
+            </tr>
+        </table>
+
+        <h3>STAFF TOILET</h3>
+        <table>
+            <tr>
+                <td>Wipe down sink</td>
+                <td class="checkbox"><input type="checkbox" name="wipe-sink"></td>
+            </tr>
+            <tr>
+                <td>Clean toilet</td>
+                <td class="checkbox"><input type="checkbox" name="clean-toilet"></td>
+            </tr>
+            <tr>
+                <td>Stock up toilet roll (as required)</td>
+                <td class="checkbox"><input type="checkbox" name="stock-toilet-roll"></td>
+            </tr>
+            <tr>
+                <td>Stock up hand wash (as required)</td>
+                <td class="checkbox"><input type="checkbox" name="stock-hand-wash"></td>
+            </tr>
+            <tr>
+                <td>Empty bin</td>
+                <td class="checkbox"><input type="checkbox" name="empty-bin"></td>
+            </tr>
+            <tr>
+                <td>Clean window ledge</td>
+                <td class="checkbox"><input type="checkbox" name="clean-window-ledge"></td>
+            </tr>
+            <tr>
+                <td>Clean mirror</td>
+                <td class="checkbox"><input type="checkbox" name="clean-mirror"></td>
+            </tr>
+            <tr>
+                <td>Clean skirting boards</td>
+                <td class="checkbox"><input type="checkbox" name="clean-skirting-boards"></td>
+            </tr>
+            <tr>
+                <td>Wipe down top of mirror cabinet</td>
+                <td class="checkbox"><input type="checkbox" name="wipe-mirror-cabinet"></td>
+            </tr>
+        </table>
+
+        <h3>JANE’S LIVING ROOM</h3>
+        <table>
+            <tr>
+                <td>Wipe down window ledge</td>
+                <td class="checkbox"><input type="checkbox" name="wipe-window-ledge"></td>
+            </tr>
+            <tr>
+                <td>Glass in door cleaned (weekly)</td>
+                <td class="checkbox"><input type="checkbox" name="clean-door-glass"></td>
+            </tr>
+            <tr>
+                <td>Skirting board</td>
+                <td class="checkbox"><input type="checkbox" name="clean-skirting-board"></td>
+            </tr>
+            <tr>
+                <td>Wipe down Table top, tea making area & fridge</td>
+                <td class="checkbox"><input type="checkbox" name="wipe-table-tea-area"></td>
+            </tr>
+            <tr>
+                <td>Clean armchair</td>
+                <td class="checkbox"><input type="checkbox" name="clean-armchair"></td>
+            </tr>
+        </table>
+
+        <h3>STAIRS UPSTAIRS LANDING AND HALL</h3>
+        <table>
+            <tr>
+                <td>Bannisters wipe down</td>
+                <td class="checkbox"><input type="checkbox" name="wipe-bannisters"></td>
+            </tr>
+            <tr>
+                <td>Skirting board cleaned</td>
+                <td class="checkbox"><input type="checkbox" name="clean-skirting-board"></td>
+            </tr>
+            <tr>
+                <td>Clean mirror on landing</td>
+                <td class="checkbox"><input type="checkbox" name="clean-mirror"></td>
+            </tr>
+        </table>
+
+        <div class="submit-section">
+            <label for="Night Duty staff-name"><strong>Night Duty Staff Name:</strong></label>
+            <input type="text" id="Night Duty staff-name" name="Night Duty staff-name" required>
+            <label for="Day Duty staff-name"><strong>Day Duty Staff Name:</strong></label>
+            <input type="text" id="Day Duty staff-name" name="Day Duty staff-name" required>
+            <label for="date"><strong>Date:</strong></label>
+            <input type="date" id="date" name="date" required>
+            <input type="submit" value="Submit">
+        </div>
+        
+        <div id="confirmationMessage">
+            Night duty task record saved successfully. Thank you for providing excellent support in my daily activities, making life worth living, and helping to create a better world.
+        </div>
+    </form>
+</body>
+
+</html>

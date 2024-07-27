@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participation Record</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .header-container img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            margin-right: 20px;
+        }
+
+        .company-logo {
+            position: left;
+            top: 0px;
+            right: 0px;
+            border-radius: 0% !important;
+            width: 150px;
+            height: 75px;
+        }
+
+        .header-text {
+            text-align: center;
+            flex: 1;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .section-title {
+            margin-top: 40px;
+        }
+
+        .submit-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .submit-section label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        .submit-section input[type="text"],
+        .submit-section input[type="date"] {
+            width: 200px;
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        .submit-section input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #76b8b3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #confirmationMessage {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        const userDetails = {
+            "MR. Perry Harry": {
+                dob: "1900-01-11",
+                gp: "Belfast City Hospital",
+                drugAllergy: "None known",
+                profilePic: "file:///Users/apple/Desktop/medical_project/Male-1.png"
+            },
+            "MS. Jane Doe": {
+                dob: "1975-05-14",
+                gp: "City Health Clinic",
+                drugAllergy: "Penicillin",
+                profilePic: "file:///Users/apple/Desktop/medical_project/Male-2.png"
+            },
+            "MR. John Smith": {
+                dob: "1980-02-20",
+                gp: "Town Health Center",
+                drugAllergy: "None known",
+                profilePic: "file:///Users/apple/Desktop/medical_project/Male-3.png"
+            }
+        };
+
+        function fillDetails() {
+            const userName = document.getElementById("service-user-name").value;
+            if (userDetails[userName]) {
+                document.getElementById("dob").value = userDetails[userName].dob;
+                document.getElementById("gp").value = userDetails[userName].gp;
+                document.getElementById("drug-allergy").value = userDetails[userName].drugAllergy;
+                document.getElementById("profile-pic").src = userDetails[userName].profilePic;
+                calculateAge(userDetails[userName].dob);
+            } else {
+                document.getElementById("dob").value = "";
+                document.getElementById("gp").value = "";
+                document.getElementById("drug-allergy").value = "";
+                document.getElementById("age").value = "";
+                document.getElementById("profile-pic").src = "/static/assets/images/profil.png";
+            }
+        }
+
+        function calculateAge(dob) {
+            const birthDate = new Date(dob);
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            document.getElementById("age").value = age;
+        }
+
+        function showConfirmationMessage() {
+            document.getElementById('confirmationMessage').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('confirmationMessage').style.display = 'none';
+            }, 5000);
+        }
+
+        function clearForm() {
+            document.getElementById('myForm').reset();
+            fillDetails();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('myForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form from submitting
+                clearForm();
+                showConfirmationMessage();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <img id="company-logo" class="company-logo" src="file:///Users/apple/Desktop/medical_project/medical_project.png" alt="Company Logo">
+    </div>
+    <div class="header-container">
+        <img id="profile-pic" src="/static/assets/images/profil.png" alt="Profile Picture">
+        <div class="header-text">
+            <h1>Participation Record</h1>
+            <p><strong>UPDATED ON:</strong> 21.07.2024</p>
+            <p><strong>UPDATED BY:</strong> Internal Audit</p>
+        </div>
+    </div>
+
+    <h2>Service User’s Details</h2>
+    <form id="myForm" action="save_participation.php" method="post">
+        <table>
+            <tr>
+                <th>Service User’s name</th>
+                <th>D.O.B</th>
+                <th>Age</th>
+                <th>G.P.</th>
+                <th>Drug Allergy</th>
+            </tr>
+            <tr>
+                <td>
+                    <select id="service-user-name" name="service-user-name" onchange="fillDetails()" required>
+                        <option value="">Select User</option>
+                        <option value="MR. Perry Harry">MR. Perry Harry</option>
+                        <option value="MS. Jane Doe">MS. Jane Doe</option>
+                        <option value="MR. John Smith">MR. John Smith</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </td>
+                <td><input type="date" id="dob" name="dob" readonly></td>
+                <td><input type="number" id="age" name="age" min="0" readonly></td>
+                <td><input type="text" id="gp" name="gp" readonly></td>
+                <td><input type="text" id="drug-allergy" name="drug-allergy" readonly></td>
+            </tr>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">Category</th>
+                    <th colspan="31">Days of the Month</th>
+                    <th rowspan="2">Total</th>
+                </tr>
+                <tr>
+                    <!-- Generate day numbers dynamically -->
+                    <script>
+                        for (let i = 1; i <= 31; i++) {
+                            document.write(`<th>${i}</th>`);
+                        }
+                    </script>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Generate rows dynamically based on categories -->
+                <script>
+                    const categories = [
+                        "Supported to attend health app",
+                        "Received annual flu vaccination",
+                        "Attended health initiative",
+                        "Supported to manage risk",
+                        "Took part in health and safety initiative",
+                        "Supported to claim benefits",
+                        "Supported to manage personal finances",
+                        "Supported with debt/arrears",
+                        "Supported with money saving initiative",
+                        "Plan in place to develop new skill",
+                        "Supported with home cleaning, laundry, cooking",
+                        "Supported to report repairs/maintain home",
+                        "Supported with a tenancy issue",
+                        "Supported with a consumer/environment initiative",
+                        "Supported to maintain family contact",
+                        "Supported to maintain a friendship",
+                        "Supported to maintain a relationship",
+                        "Supported with a day activity",
+                        "Supported to attend leisure activity",
+                        "Supported to attend place of worship",
+                        "Supported to attend Triangle event",
+                        "Supported to attend community event"
+                    ];
+
+                    categories.forEach(category => {
+                        document.write('<tr>');
+                        document.write(`<td>${category}</td>`);
+                        for (let i = 1; i <= 31; i++) {
+                            document.write('<td><input type="checkbox" name="' + category + '-' + i + '"></td>');
+                        }
+                        document.write('<td class="total-cell"><input type="number" name="total-' + category + '" readonly></td>');
+                        document.write('</tr>');
+                    });
+                </script>
+            </tbody>
+        </table>
+
+        <div class="submit-section">
+            <label for="staff-name"><strong>Staff Name:</strong></label>
+            <input type="text" id="staff-name" name="staff-name" required>
+            <label for="date"><strong>Date:</strong></label>
+            <input type="date" id="date" name="date" required>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <div id="confirmationMessage">
+        Participation record saved successfully. Thank you for providing excellent support in my daily activities, making life worth living, and helping to create a better world.
+    </div>
+</body>
+
+</html>
