@@ -265,6 +265,7 @@ function fillDetailsMedication() {
         updateMedications(userDetails[userName].medications);
         calculateAgeMedication(userDetails[userName].dob);
     } else {
+        console.log("User not found, loading fallback image.");
         document.getElementById("dob").value = "";
         document.getElementById("gp").value = "";
         document.getElementById("drug-allergy").value = "";
